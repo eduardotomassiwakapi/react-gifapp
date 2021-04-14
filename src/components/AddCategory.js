@@ -7,6 +7,7 @@ export const AddCategory = ({ setCategories, /*limit, setLimit*/ }) => {
     //const [inputLimitValue, setInputLimitValue] = useState(limit)
     
     const handleCategoryInputChange = (e) => {
+        //console.log("handleCategoryInputChange="+e.target.value);
         setInputCategoryValue(e.target.value);
     }
     // const handleLimitInputChange = (e) => {
@@ -15,6 +16,7 @@ export const AddCategory = ({ setCategories, /*limit, setLimit*/ }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (inputCategoryValue.trim().length > 2) {
+            //console.log("handleSubmit="+inputCategoryValue);
             setCategories(oldCategories => [inputCategoryValue, ...oldCategories,]);
             //setLimit(inputLimitValue);
             setInputCategoryValue('');
@@ -24,8 +26,10 @@ export const AddCategory = ({ setCategories, /*limit, setLimit*/ }) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <input type="text" 
-            value={inputCategoryValue} onChange={ (e) => handleCategoryInputChange(e)} />
+            <input
+                type="text" 
+                value={inputCategoryValue}
+                onChange={ (e) => handleCategoryInputChange(e)} />
             {/* <input type="number" 
             value={limit} onChange={ (e) => handleLimitInputChange(e)} /> */}
         </form>

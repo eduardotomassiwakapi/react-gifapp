@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
 
-const GifExpertApp = () => {
+const GifExpertApp = ({defaultCategories = []}) => {
 
-    const list = ['Boobs',];
-    const [categories, setCategories] = useState(list);
+    const [categories, setCategories] = useState(defaultCategories);
     //const [limit, setLimit] = useState(20)
     const limit = 20;
     // const addCategory = (newCat) => {
@@ -18,7 +17,9 @@ const GifExpertApp = () => {
         <AddCategory setCategories={setCategories} />
         {/* <button onClick={ () => addCategory('asd') }>Add</button> */}
         <hr />
-        {categories.join(' - ')}
+        <div >
+            {categories.join(' - ')}
+        </div>
         <hr />
         <ol>
             {

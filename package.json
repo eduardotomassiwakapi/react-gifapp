@@ -36,6 +36,9 @@
     ]
   },
   "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2",
     "favicons-webpack-plugin": "^5.0.2",
     "webpack-pwa-manifest": "^4.3.0"
   }
