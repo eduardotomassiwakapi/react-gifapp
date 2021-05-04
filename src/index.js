@@ -5,7 +5,7 @@ import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <GifExpertApp defaultCategories={['Boobs', 'Tits']}/>
+    <GifExpertApp defaultCategories={['Money drop']}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
